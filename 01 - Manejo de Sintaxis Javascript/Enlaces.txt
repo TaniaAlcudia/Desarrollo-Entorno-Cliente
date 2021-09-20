@@ -1,0 +1,4 @@
+Chuleta de referencias - https://overapi.com/javascript
+JavaScript Tutorial - https://www.w3schools.com/js/
+Comprimir el codigo mediante minify - https://webdesign.tutsplus.com/es/tutorials/how-to-externalize-and-minify-javascript--cms-30718
+Mini Tutorial String Literales - https://developers.google.com/web/updates/2015/01/ES6-Template-Strings

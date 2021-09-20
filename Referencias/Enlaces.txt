@@ -1,0 +1,4 @@
+Navegadores mas utilizados - https://www.w3schools.com/browsers/default.asp
+Navegadores y tecnologias soportadas - https://robertnyman.com/html5/
+Tecnologias javascript soportadas por los naveadores - https://robertnyman.com/javascript/
+Cursos Online tutorizados Udemy - https://www.udemy.com/

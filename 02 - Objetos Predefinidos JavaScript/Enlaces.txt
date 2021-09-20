@@ -1,0 +1,2 @@
+Funciones Predefinidas - https://www.w3schools.com/jsref/jsref_obj_global.asp
+Libreria moment.js - https://momentjs.com/
