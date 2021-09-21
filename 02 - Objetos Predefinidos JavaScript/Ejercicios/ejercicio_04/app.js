@@ -23,8 +23,6 @@ function mostrarInfoScreen()
     document.getElementById("screen").innerHTML=`La resolución de la pantalla es ${anchoPantalla}x${altoPantalla}`;
 }
 
-
-
 function establecerEstilo()
 {
     for(let elementHtml of document.getElementsByClassName("box"))
