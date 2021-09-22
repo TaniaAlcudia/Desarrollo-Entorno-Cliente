@@ -9,3 +9,5 @@ function pedirNombre()
     
     document.write(nombre + ", has tardado " + ((post-pre)/1000).toFixed(2) + " segundos en introducir tu nombre.");
 }
+
+window.onload = () => pedirNombre();

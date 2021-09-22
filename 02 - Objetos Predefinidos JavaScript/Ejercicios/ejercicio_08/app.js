@@ -2,7 +2,7 @@
 //“Hola”
 
 const FILAS = 2;
-const CADEA = "!Hola!";
+const CADENA = "!Hola!";
 
 let sw = 1;
 let str = "<table>";
@@ -10,21 +10,24 @@ let str = "<table>";
 for (let i = 0; i < FILAS; i++) 
 {
     if (sw == 1)
-        str += "<tr><td>Posicion</td>";
+        str += "<tr><td style='border: 1px solid;'>Posicion</td>";
     else
-        str += "<tr><td>Contenido</td>"; 
+        str += "<tr><td style='border: 1px solid;'>Contenido</td>"; 
 
     for (let j = 0; j < CADENA.length; j++) 
     {
         if(sw == 1)
-            str += "<td>" + j + "</td>";
+            str += "<td style='border: 1px solid; padding: 0px 25px;'>" + j + "</td>";
         else
-            str += "<td>" + CADENA.charAt(j) + "</td>";
+            str += "<td style='border: 1px solid; padding: 0px 25px;'>" + CADENA.charAt(j) + "</td>";
     }
 
     str += "</tr>";
     sw *= -1;
 }
 
-    str += "</table>";
-    document.write(str); 
+str += "</table>";
+document.write(str);
+
+
+ 
