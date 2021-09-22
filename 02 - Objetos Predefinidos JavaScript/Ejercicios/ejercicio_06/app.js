@@ -44,18 +44,33 @@ function validarFecha(fecha)
         if (mes < 1 || mes > 12)
             return false;
 
-        if (dia < 0)
+        if (dia < 1)
             return false;
         
         let diaLimite = 0;
 
-        switch (mes) 
+        switch (parseInt(mes)) 
         {
-            case 1, 3, 5, 7, 8, 10, 12: diaLimite = 31;
+            case 1: 
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                diaLimite = 31;
                 break;    
-            case 4, 6, 9, 11: diaLimite = 30;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                diaLimite = 30;
                 break;
-            case 2: esBisiesto(anio) ? 29 : 28;
+            case 2: 
+                if (esBisiesto(anio))
+                    diaLimite = 29;
+                else
+                    diaLimite = 28;
                 break;
             default:
                 break;
