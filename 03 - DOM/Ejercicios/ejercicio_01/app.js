@@ -1,3 +1,9 @@
+//A partir de la página web (ejercico1.html) proporcionada y utilizando las funciones 
+//DOM, mostrar en un recuadro al final de la página la siguiente información:
+//a. Número de enlaces de la página
+//b. Dirección a la que enlaza el penúltimo enlace
+//c. Numero de enlaces que enlazan a http://prueba
+//d. Número de enlaces del tercer párrafo
 window.onload = () => {
 
     const box = document.createElement("div");
