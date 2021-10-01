@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Municipios de Euskal Herria</title>
+    <script src="script/app.js"></script>
+</head>
+
+<body>
+
+    <form name="f1">
+        <select name="provincia" onchange="cambia_provincia()"> 
+    <option value="0" selected>Seleccione Provincia
+    <option value="1">Araba 
+    <option value="2">Bizkaia 
+    <option value="3">Gipuzkoa 
+    <option value="4">Nafarroa 
+    <option value="5">Lapurdi 
+    <option value="6">Zuberoa
+    <option value="7">Nafarroa Beherea
+    </select>
+
+        <select name="municipio" onchange="muestraDatos()"> 
+    <option value="-">Seleccione Municipio
+    </select>
+        <p id="mensaje"></p>
+    </form>
+
+</body>
+
+</html>
+</body>
+
+</html>
+
+</html>
+
+</html>
