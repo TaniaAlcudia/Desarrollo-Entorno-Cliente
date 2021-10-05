@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista con Map</title>
+</head>
+
+<body>
+
+    <p>Presiona el botón para opbtener un array de nombres.</p>
+    <button onclick="myFunction()">Aceptar</button>
+
+    <p>Nuevo array: <span id="demo"></span></p>
+
+    <script>
+        var personas = [{
+            firstname: "Gorka",
+            lastname: "Alda"
+        }, {
+            firstname: "David",
+            lastname: "Gómez"
+        }, {
+
+            firstname: "Eva",
+            lastname: "Liberal"
+        }, {
+            firstname: "Daniel",
+            lastname: "Lisarri"
+        }, {
+            firstname: "Rubén",
+            lastname: "Mateos"
+        }, {
+            firstname: "Lizar",
+            lastname: "Presumido"
+        }, ];
+
+        var fullname = "";
+
+        function getFullName(item, index) {
+            fullname += '<li>' + [item.firstname, item.lastname].join(" ") + '</li>';
+            return fullname;
+        }
+
+        function myFunction() {
+            var listado = personas.map(getFullName);
+            console.log(listado);
+            document.getElementById("demo").innerHTML = listado[5];
+        }
+    </script>
+
+</body>
+
+</html>

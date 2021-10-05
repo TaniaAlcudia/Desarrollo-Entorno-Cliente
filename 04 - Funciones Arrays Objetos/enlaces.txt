@@ -1,0 +1,6 @@
+Funciones de usuario w3schools - https://www.w3schools.com/js/js_functions.asp
+Funciones de usuario developer.mozilla - https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions
+Arrow Functions developer.mozilla - https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions#Arrow_functions
+Arrow functions w3schools - https://www.w3schools.com/js/js_arrow_function.asp
+Funcion map - https://www.w3schools.com/jsref/jsref_map.asp
+Objeto prototype en funciones - https://www.w3schools.com/js/js_object_prototypes.asp
