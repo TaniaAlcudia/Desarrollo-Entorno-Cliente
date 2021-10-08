@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio11</title>
+        <script>
+			function jugar(){
+				var numero=Math.floor(Math.random()*100);
+				alert(numero);
+				var aceptar=false
+				do{
+					var prueba=parseInt(prompt("Adivine el número"));
+					if (isNaN(prueba)){
+						alert("Debe introducir un número");
+					}else{
+						if (numero==prueba){
+							aceptar=true;
+							alert("¡Exacto!");
+						}else if (numero<prueba){
+							alert("Mi número es menor")
+						}else{
+							alert("Mi número es mayor");
+						}
+					}
+				}while (aceptar==false);
+			}
+				
+		</script>
+    </head>
+	<body> 
+    	<header><h1>ADIVINA EL NÚMERO</h1></header>
+        <section>
+        	<form name="formu1">
+            	<input type="button" value="Jugar" onclick="jugar()">
+              </form>
+			
+        </section>
+    </body> 
+</html>

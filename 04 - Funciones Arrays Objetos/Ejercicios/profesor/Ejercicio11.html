@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio11</title>
+        <script>
+			function tipoLetra(cadena){
+				var mayusculas=false;
+				var minusculas=false;
+				for (var i=0;i<cadena.length;i++){
+					if (mayusculas && minusculas){
+						i=cadena.length
+					}else{
+						if (cadena[i].toLowerCase()==cadena[i]){
+							minusculas=true;
+						}else{
+							mayusculas=true;
+						}
+					}
+				}
+				var texto="";
+				if (mayusculas && minusculas){
+					texto="El texto tiene mayusculas y minusculas";
+				}else if (mayusculas && !minusculas){
+					texto="El texto esta en mayusculas";
+				}else{
+					texto="El texto esta en minusculas";
+				}
+				var myWindow1 = window.open("", "", "width=300,height=300");
+				 myWindow1.document.write('<!doctype html>');
+				 myWindow1.document.write('<html lang=\'es\'>');
+				 myWindow1.document.write('<head>');
+				 myWindow1.document.write('<meta charset=\'utf-8\'>');  
+				 myWindow1.document.write('<title>Tipo de letra</title>'); 
+				 myWindow1.document.write('</head>') ; 
+				 myWindow1.document.write('<body><section>');
+				 myWindow1.document.write('<p>' + texto + '</p>');
+				 myWindow1.document.write('<form><input type=\'button\' value=\'Cerrar\' onclick= \'window.close()\'></form>');
+				 myWindow1.document.write('</section></body>');
+				 myWindow1.document.write('</html>');
+				 
+				
+			}
+		</script>
+    </head>
+	<body> 
+    	<header><h1>TIPO DE LETRA</h1></header>
+        <section>
+        	<form name="formu1">
+            	<input type="text" name="texto" >
+                <input type="button" value="Verificar el tipo de letra" onclick="tipoLetra(document.formu1.texto.value)">
+              </form>
+			
+        </section>
+    </body> 
+</html>

@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio2</title>
+	</head>
+    <body>
+		 <script>
+            var cadena=prompt("Introduce las palabras que desee:");
+            if (cadena.trim().length!=0){
+                palabras=new Array();
+                palabras=cadena.split(" ");
+                var miventana=window.open("","Arrays","width=500,height=500");
+                miventana.document.write('<!doctype html>');
+                miventana.document.write('<html lang=\'es\'>');
+                miventana.document.write('<head>');
+                miventana.document.write('<meta charset=\'utf-8\'>');  
+                miventana.document.write('<title>Arrays</title>'); 
+                miventana.document.write('</head>') ; 
+                miventana.document.write('<body><section>');
+                miventana.document.write('<p>Primera palabra: ' + palabras[0] + '</p>');
+                miventana.document.write('<p>Ultima palabra: ' + palabras[palabras.length-1] + '</p>');
+                miventana.document.write('<p>Número de palabras: ' + palabras.length + '</p>');
+                miventana.document.write('<p>Palabras ordenadas: ' + palabras.sort() + '</p>');
+                miventana.document.write('</section></body>');
+                miventana.document.write('</html>');
+                           
+            }else{
+                alert("Debe introducir alguna palabra");
+            }
+        </script>
+        <noscript>
+            <p>Para ver correctamente este código tiene que activar JavaScript</p>
+        </noscript>
+     </body>
+</html>
+

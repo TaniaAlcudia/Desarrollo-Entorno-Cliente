@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio10</title>
+        <link href="css/estilos10.css" rel="stylesheet" >
+        <script>
+			function fechaValida(){
+				var valida=false;
+				if (fecha.length==10){
+					var trozos=fecha.split("/")
+					if (trozos.length==3){
+						var dia=trozos[0];
+						var mes=trozos[1];
+						var ano=trozos[2];
+						if (dia.length==2 && !isNaN(dia) && mes.length==2 && !isNaN(mes) && ano.length==4 && !isNaN(ano)){
+							if (mes>=1 && mes<=12){
+								if ((mes==1 || mes==3 || mes==5 || mes==7 || mes==8 || mes==10 || mes==12) && (dia>=1 && dia<=31)){
+									valida=new Date(ano, mes-1, dia);
+								}else if ((mes==4 || mes==6 || mes==9 || mes==11) && (dia>=1 &&dia<=30)){
+									valida=new Date(ano, mes-1, dia);
+								}else if (mes==2){
+									if (dia>=1 &&dia<=28){
+										valida=new Date(ano, mes-1, dia);
+									}else if (dia==29 && (ano%4)==0){
+										valida=new Date(ano, mes-1, dia);
+									}
+								}
+							}
+						}
+					}
+				}
+				return valida;
+			}
+		</script>
+    </head>
+	<body> 
+    	<header><h1>VALIDANDO FECHAS</h1></header>
+        <section>
+			<script>
+                var fecha=prompt("Introduce una fecha (dd/mm/aaaa)");
+			   fecha =fechaValida();
+				if (fecha!=false){
+                    document.write("<p>Fecha introducida: " + fecha.toLocaleDateString()+"</p>");
+                    document.write("<p>Ese mismo día en...</p>");
+                    document.write("<table>");
+                    document.write("<tr>");
+                    document.write("<td>el año...</td>");
+                    var anio=parseInt(fecha.getFullYear());
+					var aux
+					for (var i=4; i>=0;i--){
+						aux=anio-i
+                        document.write("<td>" +aux +"</td>"); 
+                    }
+                    document.write("<tr></tr>");
+					document.write("<td>era un...</td>");
+					var dias_semana=new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
+					for (var i=4; i>=0;i--){
+						var fech=new Date(anio-i,fecha.getMonth(),fecha.getDate());
+                        document.write("<td>" + dias_semana[fech.getDay()] +"</td>"); 
+                    }
+                	document.write("<tr></tr>");
+					document.write("</table>")
+                }else{
+					alert("La fecha no es válida");
+                    location.reload();
+                }
+            </script>
+        </section>
+    </body> 
+</html>

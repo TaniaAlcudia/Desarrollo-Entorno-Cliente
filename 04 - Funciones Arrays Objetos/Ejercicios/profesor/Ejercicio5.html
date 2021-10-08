@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio5</title>
+        <script>
+			function sumar(num1, num2){
+				return num1+num2;
+			}
+		</script>
+	</head>
+	<body>
+    	<header><h1>FUNCION SUMA</h1></header>
+        <section>
+        	<script>
+				var numero1 = parseInt(prompt ("Introduce el primer sumando;"));
+				var numero2 =parseInt( prompt ("Introduce el segundo sumando;"));
+				var resultado;
+				if (isNaN(numero1) || isNaN(numero2)){
+					alert("No ha introducido dos numeros");
+				}else{
+					resultado=sumar(numero1, numero2);
+					document.write("<p>Primer sumado: " + numero1 + "</p>");
+					document.write("<p>Segundo sumado: " + numero2 + "</p>");
+					document.write("<p>Resultado: <strong>" + resultado + "</strong></p>");
+					
+				}
+			</script>
+        </section>
+    	<noscript>
+            <p>Para ver correctamente este código tiene que activar JavaScript</p>
+        </noscript>
+	</body> 
+</html> 

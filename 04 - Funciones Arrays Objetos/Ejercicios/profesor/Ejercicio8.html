@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio8</title>
+        <script>
+			var letras = new Array('T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T');
+			function validarDNI(){
+				var dnic=document.miformu.dni.value
+				var dni;
+				var letra;
+				var resto;
+				if (dnic.length!=9){
+					alert("Introduzca un DNI correcto");
+				}else{
+					dni=dnic.substr(0,8);
+					letra=dnic.substr(8,1);
+					if (dni.isNaN) {
+						alert("Introduza un DNI correcto");
+					}else{
+						resto=parseInt(dni)%23;
+						if (letra==letras[resto]){
+							alert("DNI correcto");
+						}else{
+							alert("Introduza un DNI correcto, la letra no se corresponde con el número de DNI");
+						}
+					}
+				} 
+			}
+		</script>
+    </head>
+	<body>
+    	<header><h1>DNI</h1></header>
+        <section>
+        	<form name="miformu">
+            	<input type="text" name="dni" value="">
+                <input type="button" value="Validar" onclick="validarDNI()">
+         </form>
+		</section>      
+        <noscript>
+            <p>Para ver correctamente este código tiene que activar JavaScript</p>
+        </noscript>
+	</body> 
+</html> 
+

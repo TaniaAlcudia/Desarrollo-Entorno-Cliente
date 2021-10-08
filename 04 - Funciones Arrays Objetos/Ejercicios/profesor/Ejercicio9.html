@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio9</title>
+        <script>
+			var j=1;
+			var array1=new Array("Rojo","Verde","Azul");
+			var array2=new Array("70","9","800");
+			var array3=new Array(50,10,2,300);
+			var array4=new Array("70","8","850",30,10,5,400);
+			function mostrarArray(unarray){
+				document.write("<p>Array" + j + ": ");
+				for (var i=0;i<unarray.length;i++){
+						if (typeof unarray[i]=="string"){
+							document.write("\"" + unarray[i] + "\"");
+						}else{
+							document.write("" + unarray[i] + "");
+						}
+						if (i!=(unarray.length-1)){
+							document.write(",");
+						}
+				}
+				document.write("</p>");
+				j++;
+			}
+		</script>
+    </head>
+	<body>
+    	 <section>
+				<script>
+					mostrarArray(array1);
+					mostrarArray(array2);
+					mostrarArray(array3);
+					mostrarArray(array4);
+				</script>                    
+				
+			
+		</section>      
+        <noscript>
+            <p>Para ver correctamente este código tiene que activar JavaScript</p>
+        </noscript>
+	</body> 
+</html> 
+

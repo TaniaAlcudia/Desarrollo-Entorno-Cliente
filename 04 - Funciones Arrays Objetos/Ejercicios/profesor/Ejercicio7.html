@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicio7</title>
+        <script> 
+           function imprimeDatos(){
+		   		document.write("<p></br>Código: " + this.codigo + "</br>");
+				document.write("<p>Nombre: " + this.nombre + "</br>");
+				document.write("<p>Precio: " + this.precio + "</br><p>");
+		   }
+		   function producto_alimenticio(cod, nom, pre){
+			   this.codigo=cod;
+			   this.nombre=nom;
+			   this.precio=pre;
+			   this.imprimeDatos=imprimeDatos;
+		   }
+		  </script>
+         
+	</head>
+	<body>
+    	<header><h1>OBJETO PRODUCTO_ALIMENTICIO</h1></header>
+    	<section>
+         <script>
+		   var productos =new Array();
+		   productos[0]=new producto_alimenticio("0","Pan","0.85");
+		   productos[1]=new producto_alimenticio("1","Leche","1.85");
+		   productos[2]=new producto_alimenticio("2","Tomate","0.55");
+		   var i;
+		   for (i=0; i<productos.length; i++){
+			    productos[i].imprimeDatos();
+		   }
+        </script> 
+        </section>
+    	<noscript>
+			<p>Para ver correctamente este código tiene que activar JavaScript</p>
+		</noscript>  
+	</body> 
+</html> 
+
