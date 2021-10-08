@@ -9,5 +9,3 @@ window.onload = () => {
     const outputHtml = document.getElementById('output');
     outputHtml.innerHTML = palabras.join('-');
 }
-
-
