@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p></p>
+    <button>CERRAR</button>
+</body>
+<script>
+        console.log("Render!");
+        const pHtml = document.querySelector("p");
+        pHtml.innerHTML = "Tipo de Letra: " + tipoDeLetra;
+      
+        const btnHtml = document.querySelector("button");
+        btnHtml.innerHTML = "CERRAR";
+    
+        btnHtml.onclick = (e) => window.close();
+        console.log(btnHtml.onclick);
+</script>
+</html>
