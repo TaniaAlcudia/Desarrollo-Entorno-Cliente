@@ -9,6 +9,7 @@ function tipoLetras(str)
     let esMinuscula = false;
     let esMayuscula = false;
     let esMixto = false;
+    let mensaje = "";
 
     for (let i = 0; i < str.length; i++) 
     {
@@ -35,21 +36,24 @@ function tipoLetras(str)
     }
 
     if (esMixto)
-        abrirVentana("Mixto");
+        mensaje = "Mixto";
     else if (esMayuscula)
-        abrirVentana("Mayusculas");
+        mensaje = "Mayusculas";
     else if (esMinuscula)
-        abrirVentana("Minusculas");
-    else
-        abrirVentana("Glifos");
-}
+        mensaje = "Minusculas";
+    elses
+        mensaje = "Glifos";
 
-function abrirVentana(tipoDeLetra)
-{
-    const ventana = window.open("./mayus.html", "Tipo de Letra", "width=300,height=300");
-    console.log("LA PUTA MADREEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
-  
-}   
+
+    const ventana = window.open("", "Tipo de Letra", "width=300,height=300");
+    const pHtml = ventana.document.querySelector("p");
+    pHtml.innerHTML = "Tipo de Letra: " + mensaje;
+      
+    const btnHtml = ventana.document.querySelector("button");
+    btnHtml.innerHTML = "CERRAR";
+    
+    btnHtml.onclick = () => window.close();
+}
 
 window.onload = () => {
     const btnValidarHtml = document.getElementById("btn-validar");
