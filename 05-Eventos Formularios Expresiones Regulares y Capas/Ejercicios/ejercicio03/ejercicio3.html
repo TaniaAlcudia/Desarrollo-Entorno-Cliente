@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <style type="text/css">
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        table {
+            margin: auto;
+        }
+        
+        table td {
+            border: 1px black solid;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(2) td {
+            text-align: left;
+            font-weight: normal;
+            padding: 20px;
+        }
+
+        .btns {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>SELECT</h1>
+    <script src="app.js"></script>
+    <P>Selecciona las opciones deseadas:</P>
+    <form action="#">
+        <table>
+            <tr>
+                <td>Procesador</td>
+                <td>Sistemas Operativos</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="procesador">
+                        <option value="Mac Pro 2,0 Mhz">Mac Pro 2,0 Mhz</option>
+                        <option value="Intel i3 1,9 Mhz">Intel i3 1,9 Mhz</option>
+                        <option value="Intel i5 2,2 Mhz" selected>Intel i5 2,2 Mhz</option>
+                    </select>
+                </td>
+                <td>
+                    <select multiple name="os">
+                        <option value="Windows XP">Windows XP</option>
+                        <option value="Windows 7" selected>Windows 7</option>
+                        <option value="Windows Server 2008">Windows Server 2008</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <div class="btns">
+            <button id="btn-enviar">Enviar</button>
+		    <button id="btn-limpiar">Limpiar</button>
+        </div>
+	</form>
+</body>
+</html>

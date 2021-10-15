@@ -30,18 +30,21 @@ function tipoLetras(str)
         else if (esMayuscula)
             mensaje = "mayusculas";
 
+            
         const ventana = window.open("", "_blank", "width=300,height=300");
+        ventana.document.write("<p>Tipo de letra: " + mensaje + "</p>");
+        ventana.document.write("<button onclick='window.close()'>CERRAR</button>");
 
-        const pHtml = ventana.document.createElement("p");
-        pHtml.innerHTML = "Tipo de letra: " + mensaje;
+        // const pHtml = ventana.document.createElement("p");
+        // pHtml.innerHTML = "Tipo de letra: " + mensaje;
         
-        const btnHtml = ventana.document.createElement("button");
-        btnHtml.innerHTML = "CERRAR";
+        // const btnHtml = ventana.document.createElement("button");
+        // btnHtml.innerHTML = "CERRAR";
         
-        btnHtml.onclick = () => window.close();
+        // btnHtml.onclick = () => window.close();
 
-        ventana.document.body.appendChild(pHtml);
-        ventana.document.body.appendChild(btnHtml);
+        // ventana.document.body.appendChild(pHtml);
+        // ventana.document.body.appendChild(btnHtml);
     }
     
 }

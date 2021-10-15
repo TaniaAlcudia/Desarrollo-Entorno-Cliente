@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>JavaScript Arrays</h2>
+
+    <p>Recorrer un array con for.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        let text = "";
+        const frutas = ["apple", "orange", "cherry"];
+        
+/*         for(var i=0; i<frutas.length; i++) {
+            text += frutas[i] + "<br>";     
+        }  */
+
+        frutas.forEach(fruta =>{
+            text += fruta+"<br>";
+        })
+        document.getElementById("demo").innerHTML = text;
+    </script>
+
+</body>
+
+</html>
